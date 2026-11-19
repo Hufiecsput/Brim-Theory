@@ -1,6 +1,6 @@
 function Navbar () {
     return (
-         <nav className="flex items-center justify-between px-6 py-4 border-b">
+         <nav className="flex items-center justify-between px-6 py-4 border-b bg-red-200" >
 
       <div className="flex items-center gap-3">
         <img src="/logo/logo.jpg" alt="BRIM THEORY" className="h-10" />

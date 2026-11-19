@@ -1,6 +1,8 @@
 import Navbar from "./components/Navbar";
-
 import ProductList from './components/ProductList';
+import Footer from "./components/Footer";
+
+
 function App() {
 
 
@@ -10,10 +12,10 @@ function App() {
       <Navbar/>
     </div>
 
-    <div className = "">
+    <div className = "mt-6">
       <ProductList/>
     </div>
-   
+   <Footer/>
 
       
     </>
