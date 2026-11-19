@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 
 import ProductList from './components/ProductList';
 function App() {
@@ -5,9 +6,14 @@ function App() {
 
   return (
     <>
+     <div>
+      <Navbar/>
+    </div>
+
     <div className = "">
       <ProductList/>
     </div>
+   
 
       
     </>
