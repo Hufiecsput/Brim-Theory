@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from 'react'
 
 const CartContext = createContext()
 
+
 export function CartProvider({ children }) {
   const [items, setItems] = useState(() => {
     try {
@@ -27,7 +28,7 @@ export function CartProvider({ children }) {
     })
   }
 
-  const removeFromCart = (id) =>
+  const deleteFromCart = (id) =>
     setItems((prev) => prev.filter((i) => i.id !== id))
 
   const updateQuantity = (id, quantity) => {
@@ -41,7 +42,7 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ items, addToCart, removeFromCart, updateQuantity, clearCart, total, count }}
+      value={{ items, addToCart, deleteFromCart, updateQuantity, clearCart, total, count }}
     >
       {children}
     </CartContext.Provider>

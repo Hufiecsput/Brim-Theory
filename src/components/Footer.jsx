@@ -24,7 +24,7 @@ function Footer (){
 
         </div>
 
-        <p className ="flex-auto">© 2026 BRIM THEORY</p>
+        <p className ="text-sm mt-4">© 2026 BRIM THEORY</p>
         </footer>
     )
 }
