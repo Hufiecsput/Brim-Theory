@@ -15,8 +15,8 @@ function ProductDetails() {
     return (
         <section className = "px-6 max-w-3xl mx-auto">
 
-            <Link to ="/shop">Back to shop</Link>
-            <img src ={product.image} alt={product.name} className = " "/>
+            <Link to ="/shop" className = "text-xl underline">Back to shop</Link>
+            <img src ={product.image} alt={product.name} className = "w-full max-w-md h-80 object-contain mx-auto mt-6"/>
 
             <h1 className = " font-extrabold text-2xl mt-4">{product.name}</h1>
 

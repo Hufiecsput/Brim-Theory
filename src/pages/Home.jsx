@@ -28,6 +28,8 @@ function Home() {
                             onClick={()=> setSelectedStyle(style)} className = "border px-3 py-1 rounded capitalize">
                                 {style}
                             </button>
+
+                            
                         ))}
                     </div>
 
