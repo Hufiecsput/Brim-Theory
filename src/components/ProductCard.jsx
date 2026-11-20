@@ -25,9 +25,11 @@ function ProductCard({product}) {
                 <p className ="bg-red-100 
 font-bold">Out of stock</p>
             )}
+
+
             <button 
             onClick={()=> addToCart(product)}
-            disabled={product.instock === false}
+            disabled={product.inStock === false}
             className = "bg-black text-white border border-white px-2 py-1 text-sm rounded">Buy</button>
         </div>
     </>
