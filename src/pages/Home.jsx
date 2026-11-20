@@ -14,7 +14,7 @@ function Home() {
     return (
         <section className ="px-6">
             <button onClick = {() => setIsOpen(!isOpen)}
-            className = "font-extrabold text-2xl">
+            className = "font-extrabold text-2xl ">
 
                  Featured hats {isOpen ? "▲" : "▼"}
 

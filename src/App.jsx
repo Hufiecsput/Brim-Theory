@@ -1,9 +1,10 @@
 import Navbar from "./components/Navbar";
-import ProductList from './components/ProductList';
+
 import Footer from "./components/Footer";
 import Home from './pages/Home';
 import {Routes, Route} from 'react-router-dom'
 import Shop from './pages/Shop'
+import ProductDetails from './pages/ProductDetails'
 
 
 
@@ -13,26 +14,26 @@ function App() {
 
   return (
     <>
-     <div>
 
-      <main className = "mt - 6">
+     <Navbar/>
+   
 
-      <routes>
-        <Routes path = "/" element = {<Home/>}/>
+      <main className = "mt-6">
+
+      <Routes>
+        <Route path = "/" element = {<Home/>}/>
         
-        <Routes path ="/shop" element = {<Shop/>}/>
+        <Route path ="/shop" element = {<Shop/>}/>
 
-      </routes>
+        <Route path = "/products/:id" element={<ProductDetails/>}/>
+
+      </Routes>
       </main>
 
-      <Navbar/>
-    </div>
+     
+   
     
-    <Home/>
 
-    <div className = "mt-6">
-      <ProductList/>
-    </div>
    <Footer/>
 
       
