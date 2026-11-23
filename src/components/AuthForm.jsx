@@ -6,7 +6,7 @@ function AuthForm() {
   const { login, register, loginWithGoogle } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
-  const redirectTo = location.state?.from?.pathname || '/'
+  const redirectTo = location.state?.from?.pathname || '/shop'
 
   const [mode, setMode] = useState('login')
   const [name, setName] = useState('')
@@ -115,7 +115,9 @@ function AuthForm() {
 
       </form>
 
-      <button onClick={handleGoogle} 
+      <button 
+      type = "button"
+      onClick={handleGoogle} 
       disabled ={submitting}
       className="mt-3 border px-4 py-2 rounded w-full">
         Continue with Google

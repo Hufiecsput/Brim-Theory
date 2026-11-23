@@ -1,9 +1,12 @@
 import { createContext, useContext, useEffect, useState } from 'react'
+import { useAuth } from './AuthContext'
 
 const CartContext = createContext()
 
-
 export function CartProvider({ children }) {
+  const { user } = useAuth()
+  const [showLogin, setShowLogin] = useState(false)
+
   const [items, setItems] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem('cart')) || []
@@ -16,7 +19,16 @@ export function CartProvider({ children }) {
     localStorage.setItem('cart', JSON.stringify(items))
   }, [items])
 
+  const closeLogin = () => setShowLogin(false)
+
+   const openLogin = () => setShowLogin(true)
+
+
   const addToCart = (product) => {
+    if (!user) {
+      setShowLogin(true)
+      return
+    }
     setItems((prev) => {
       const existing = prev.find((i) => i.id === product.id)
       if (existing) {
@@ -28,7 +40,7 @@ export function CartProvider({ children }) {
     })
   }
 
-  const deleteFromCart = (id) =>
+  const removeFromCart = (id) =>
     setItems((prev) => prev.filter((i) => i.id !== id))
 
   const updateQuantity = (id, quantity) => {
@@ -42,7 +54,18 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ items, addToCart, deleteFromCart, updateQuantity, clearCart, total, count }}
+      value={{
+        items,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        total,
+        count,
+        showLogin,
+        closeLogin,
+        openLogin
+      }}
     >
       {children}
     </CartContext.Provider>
