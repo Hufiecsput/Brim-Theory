@@ -1,16 +1,34 @@
-# React + Vite
+BRIM THEORY is an e-commerce web application aim at making the accessibility of stylish headwear easy.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FEATURES.
+User registration and login.
+Google authentication.
+Protected routes.
+Product browsing and product details.
+Shopping cart management.
+Add, remove and update product quantities.
+Responsive user interface.
 
-Currently, two official plugins are available:
+TECHNOLOGY USED.
+React
+JavaScript
+Tailwind CSS
+React Router
+Firebase Authentication
+Firebase Hosting
+Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Here is a live DEMO ==> https://brim-theory.web.app/
 
-## React Compiler
+YOU CAN:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Clone the repository.
 
-## Expanding the ESLint configuration
+Run npm install.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Configure your Firebase environment variables in a .env file.
+
+Run npm run dev.
+
+
+Note: Never commit your .env file or expose private credentials.
